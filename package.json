@@ -1,7 +1,8 @@
 {
-  "name": "forta-alert-comp-blacklist",
+  "name": "forta-alert-comp-blacklist-from-vkhnychenko",
   "version": "0.0.1",
   "description": "Forta Agent alert comp addresses blacklist",
+  "repository": "https://github.com/vkhnychenko/forta-alert-blacklist-compound",
   "scripts": {
     "build": "tsc",
     "start": "npm run start:dev",

@@ -1,3 +1,5 @@
+Please add me as a Agent Developer [Published] on Discord, my username is Vladislav#7601
+
 # Blacklisted Address Agent
 
 ## Description
