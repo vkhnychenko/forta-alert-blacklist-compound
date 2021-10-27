@@ -10,8 +10,6 @@ import {
 const handleTransaction: HandleTransaction = async (txEvent: TransactionEvent) => {
   const findings: Finding[] = [];
 
-  console.log(txEvent)
-
   if (txEvent.to !== COMPOUND_COMPTROLLER_ADDRESS) return findings;
 
   const blacklistedAddress = Object.keys(txEvent.addresses).find(address => BLACKLISTED_ADDRESSES[address])
@@ -24,7 +22,8 @@ const handleTransaction: HandleTransaction = async (txEvent: TransactionEvent) =
       description: `Transaction involving a blacklisted address: ${blacklistedAddress}`,
       alertId: "BLACKLIST-COMP-FORTA-1",
       type: FindingType.Suspicious,
-      severity: FindingSeverity.Critical,
+      severity: FindingSeverity.Medium,
+      protocol: 'Compound',
       metadata: {
         address: blacklistedAddress
       }
